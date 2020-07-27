@@ -28,18 +28,16 @@ public class Array {
         if(i < 0 || i >= itemCount)
             throw new IndexOutOfBoundsException();
 
-        for (; i < itemCount - 1; i++) {
+        for (; i < itemCount - 1; i++)
             ar[i] = ar[i + 1];
-        }
+
         itemCount--; 
     }
 
     public int indexOf(final int i) {
-        for(int j = 0 ; j< itemCount ; j++){
-            if(ar[j] == i){
-                return j;
-            }
-        }
+        for(int j = 0 ; j< itemCount ; j++)
+            if(ar[j] == i) return j;
+
         return -1;
-	}
+    }
 }
